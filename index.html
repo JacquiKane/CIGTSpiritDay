@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script defer src="js/lib/fontawesome-all.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>CIGT Spirit Day</title>
+    <style>
+        .imgUnit {
+            width: 80%;
+            height: auto;
+            border-radius: 15px;
+            border: 5px solid goldenrod;
+            box-shadow: 5px 10px #888888;
+        }
+
+        .carousel-item.active,
+        .carousel-item-next,
+        .carousel-item-prev {
+            display: block;
+        }
+
+        .carouselback {
+            height: 600px;
+            background-image: url("notepaper.png");
+        }
+
+        .carouseldef {
+            width: 90%;
+            padding-left: 10%;
+            text-align: left;
+            justify-content: left;
+            color: darkblue;
+        }
+
+        .carouselh3 {
+            color: darkblue;
+        }
+
+        .tablecarousel {
+            padding-left: 50%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            color: black;
+        }
+
+        .tablecarouseldetail {
+            width: 70%;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            color: navy;
+        }
+
+        .tablecarouseldetail td {
+            padding: 5px;
+        }
+
+        .tablecarouselborders {
+            padding: 5px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid seashell;
+            border-left: 3px solid seashell;
+            border-collapse: collapse;
+        }
+
+        .tablecarouseltd {
+            padding: 5px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            color: navy;
+            border: 3px solid seashell;
+        }
+
+        .tablecarouseltd_detail {
+            padding: 5px;
+            text-align: left;
+            color: navy;
+            border: 3px solid black;
+        }
+
+        .oomph {
+            font-size: larger;
+            font-weight: bold;
+            color: red;
+        }
+
+        .parent {
+            width: 150px;
+            height: 30px;
+            margin-left: 50px;
+            background-color: goldenrod;
+            color: white;
+            border: 2px solid grey;
+            border-radius: 15px;
+            font-size: larger;
+        }
+
+        .child {
+            width: 200px;
+            height: 30px;
+            margin-left: 50px;
+            background-color: goldenrod;
+            color: white;
+            border: 2px solid grey;
+            border-radius: 15px;
+            font-size: larger;
+        }
+
+        .grandchild {
+            width: 300px;
+            height: 30px;
+            margin-left: 50px;
+            background-color: darkgreen;
+            color: white;
+            border: 2px solid grey;
+            border-radius: 15px;
+            font-size: larger;
+        }
+
+        .bigarrow {
+            margin-left: 100px;
+            font-size: 2em;
+            text-align: left;
+        }
+
+        .codePara {
+            text-align: left;
+            font-weight: bold;
+            padding-left: 10%;
+        }
+
+        .tablequestion {
+            display: table;
+            border: 5px solid black;
+            padding: 10px;
+            border-collapse: separate;
+            justify-content: left;
+            text-align: left;
+        }
+
+        table.question-table tbody td {
+            border: solid thin;
+            padding-left: 3px;
+        }
+
+        table.question-table tbody th {
+            border: solid thin;
+            padding-left: 3px;
+        }
+
+        .infocell {
+            background-color: rgb(153, 0, 0);
+            color: rgb(238, 237, 235);
+        }
+
+        .material-icons i {
+            margin-right: -10px;
+            padding-right: -5px;
+        }
+
+        i.custom {
+            font-size: 2em;
+            color: goldenrod;
+            background-color: black;
+            border-radius: 5px;
+        }
+
+        .oomph {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .popupimg {
+            width: 90%;
+            height: auto;
+        }
+
+        .buttonOomph {
+            height: auto;
+        }
+
+        .spiritHeader {
+            width: 100%;
+            align-items: center;
+            text-align: center;
+        }
+
+        .facultypic {
+            width: 50px;
+            height: auto;
+            border-radius: 25px;
+            border: 2px solid rgb(153, 0, 0);
+        }
+
+        .iulogo {
+            width: 50px;
+            height: auto;
+            border: 2px solid rgb(153, 0, 0);
+            border-radius: 15px;
+        }
+
+        .schoolLabel {
+            font-size: 1.5em;
+            font-weight: bolder;
+            color: goldenrod;
+            font-family: 'BentonSans', sans-serif;
+        }
+
+        .goldbkg {
+            background-color: goldenrod;
+            color: black;
+        }
+
+        a {
+            color: black;
+            background-color: gold;
+        }
+
+        a:hover {
+            color: #990000
+        }
+
+        .iupui {
+            background-color: black;
+            color: beige;
+            border: 7px solid black;
+            font-family: 'BentonSans', sans-serif;
+        }
+
+        .infocontainer {
+            display: inline-flex;
+            width: 100%;
+            border-bottom: 1px solid black;
+            margin-top: 5px;
+            padding-top: 5px;
+            gap: 10px;
+            flex: 1 100%;
+            font: "Benton Sans", helvetica, sans;
+        }
+
+        .infocontainerdivider {
+            border-top: 2px solid goldenrod;
+            width: 100%;
+            height:2px;
+        }
+
+        .infocontaineritem {
+            width: 100%;
+        }
+
+        .infocontainerjobsitem {
+            width: 100%;
+        }
+
+        .infoHeader {
+            background-color: goldenrod;
+            color: black;
+            font-size: 140%;
+font-weight: boldest;
+font-family: 'BentonSans', sans-serif;
+        }
+
+        .roundyButton {
+            border-radius: 10px;
+            font-family: 'BentonSans', sans-serif;
+        }
+        .question {
+            font-size: 135%;
+            font-family: 'BentonSans', sans-serif;
+        }
+        .questionanswer {
+            font-size: 105%;
+            font-family: 'BentonSans', sans-serif;
+        }
+        .jobopps {
+            font-size: 135%;
+            font-family: 'BentonSans', sans-serif;
+        }
+        li {
+            font-family: 'BentonSans', sans-serif;
+        }
+
+        @media screen and (max-width: 700px) {
+            .jobopps {
+            font-size: 80%;
+            font-family: 'BentonSans', sans-serif;
+        }
+        li {
+            font-family: 'BentonSans', sans-serif;
+            font-size: 75%;
+        } 
+        }
+        @media screen and (max-width: 991px) {
+            .jobopps {
+            font-size: 90%;
+            font-family: 'BentonSans', sans-serif;
+        }
+        li {
+            font-family: 'BentonSans', sans-serif;
+            font-size: 85%;
+        } 
+        }
+        .bentonlook {
+            font-family: 'BentonSans', helvetica, sans-serif;
+            font-size: 110%;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-nav" data-offset="55">
+
+    <header id="page-hero" class="site-header">
+
+
+        <div class="container-fluid">
+
+
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myTogglerNav"
+                aria-controls="#myTogglerNav" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </div>
+
+        </nav>
+
+        <section class="layout-hero d-flex align-items-center text-light text-center">
+            <div class="container">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-11 col-sm-10 col-md-8 animated fadeInUp">
+                        <h1 class="schoolLabel">
+
+                            <img class="iulogo" src="./images/spiritweek.png">
+                            <span class="bentonlook">CIGT Spirit Day</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </header>
+
+    <article id="page-multicolumn" class="page-section text-center py-5">
+
+        <section class="layout-multicolumn container">
+
+            <div class="row justify-content-center family-sans text-uppercase">
+
+                <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+                    <a data-toggle="modal" data-target="#datamgmt" data-highres="images/crdatamanagement.png" href="#">
+                        <img class="layout-image imgUnit" src="images\crdatamanagement.png" alt="Data Management">
+                    </a>
+
+                    <h5 class="layout-title pt-2">Data Management</h5>
+                </section>
+
+
+                <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+                    <a data-toggle="modal" data-target="#cybersecurity" data-highres="images/crcybersecurity.png"
+                        href="#">
+                        <img class="layout-image imgUnit" src="images\crcybersecurity.png" alt="Cyber">
+                    </a>
+                    <h5 class="layout-title pt-2">Cybersecurity</h5>
+                </section>
+
+
+                <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+                    <a data-toggle="modal" data-target="#webdevelopment" data-highres="images/crwebdevelopment.png"
+                        href="#">
+                        <img class="layout-image imgUnit" src="images/crwebdevelopment.png" alt="Web">
+                    </a>
+                    <h5 class="layout-title pt-2">Web Development </h5>
+                </section>
+
+                <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+                    <a data-toggle="modal" data-target="#networking" data-highres="images/crnetworking.png" href="#">
+                        <img class="layout-image imgUnit" src="images\crnetworking.png" alt="Networks">
+                    </a>
+
+                    <h5 class="layout-title pt-2">Networks</h5>
+                </section>
+
+
+                <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+                    <a data-toggle="modal" data-target="#themedentertainment"
+                        data-highres="images/crthemedentertainment.png" href="#">
+                        <img class="layout-image imgUnit" src="images\crthemedentertainment.png"
+                            alt="Themed Entertainment">
+                    </a>
+                    <h5 class="layout-title pt-2">Themed Entertainment</h5>
+                </section>
+
+
+                <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+                    <a data-toggle="modal" data-target="#animation" data-highres="images/cranimation.png" href="#">
+                        <img class="layout-image imgUnit" src="images\cranimation.png" alt="Animation">
+                    </a>
+                    <h5 class="layout-title pt-2">Animation</h5>
+                </section>
+
+
+                <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+                    <a data-toggle="modal" data-target="#socialmedia" data-highres="images/tempsocialmedia.png"
+                        href="#">
+                        <img class="layout-image imgUnit" src="images\tempsocialmedia.png" alt="Social Media">
+                    </a>
+                    <h5 class="layout-title pt-2">Social Media</h5>
+                </section>
+
+
+                <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+                    <a data-toggle="modal" data-target="#professionalphoto" data-highres="images/crprofphoto.png"
+                        href="#">
+                        <img class="layout-image imgUnit" src="images\crphotobooth.png" alt="Photo Booth">
+                    </a>
+                    <h5 class="layout-title pt-2">Photo Booth</h5>
+                </section>
+
+                <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+                    <a data-toggle="modal" data-target="#caricature" data-highres="images/crcaricature.png" href="#">
+                        <img class="layout-image imgUnit" src="images\crcaricature.png" alt="Caricatures">
+                    </a>
+                    <h5 class="layout-title pt-2">Caricature Artist</h5>
+                </section>
+
+                <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+                    <a data-toggle="modal" data-target="#clubs" data-highres="images/crclubs.png" href="#">
+                        <img class="layout-image imgUnit" src="images\crclubs.png" alt="Cybersecuriyu">
+                    </a>
+                    <h5 class="layout-title pt-2">Clubs</h5>
+                </section>
+
+
+                <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+                    <a data-toggle="modal" data-target="#certifications" data-highres="images/certifications.png"
+                        href="#">
+                        <img class="layout-image imgUnit" src="images/certifications.png" alt="Certifications">
+                    </a>
+                    <h5 class="layout-title pt-2">Certifications</h5>
+                </section>
+
+
+
+
+            </div>
+
+        </section>
+    </article>
+
+
+
+
+
+
+
+
+    <footer class="site-footer bg-secondary text-light d-flex justify-content-center">
+
+
+
+    </footer>
+
+
+
+    <!--   Modals for each unit -->
+    <!-- DATA MANAGEMENT -->
+    <div class="modal" id="datamgmt" tabindex=-1 aria-labelledby="datamgmtLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content iupui">
+                <div class="modal-header infoHeader">
+                    <h1 class="modal-title infoHeader" id="datamgmtLabel1">Data Management</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">
+                            Why did Google Trends data fail in predicting the flu epidemic in 2013?</p>
+                       
+                            <p class="questionanswer">Give your answer to the person at the Data Management table.</p>
+                        </div>
+                    </div>
+                    <div class="infocontainer infocontainerdivider"></div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p>
+                                Job Opportunities in this area
+                            </p>
+
+                        </div>
+                        <div class="infocontaineritem">
+                            
+                                <li>Database Engineer</li>
+                                <li>Data Scientist</li>
+                                <li>Big Data Analyst</li>
+                          
+                        </div>
+
+                    </div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                      
+                                <a href="https://et.iupui.edu/departments/cigt/programs/cit/">
+                                    <button type="button" class="btn btn-warning goldbkg">
+                                        Learn more</button>
+                                </a>
+           
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CYBER SECURITY -->
+    <div class="modal" id="cybersecurity" tabindex=-1 aria-labelledby="cybersecurityLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content iupui">
+                <div class="modal-header infoHeader">
+                    <h1 class="modal-title infoHeader" id="cybersecurityLabel1">Cybersecurity</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">
+                            How many phishing attacks have Indiana University employees succumbed to,since 2010?</p>
+                       
+                            <p class="questionanswer">Give your answer to the person at the Cybersecurity table.</p>
+                        </div>
+                    </div>
+                    <div class="infocontainer infocontainerdivider"></div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">Job Opportunities in this area
+                            </p>
+                        </div>
+                        <div class="infocontaineritem">
+                          
+                                <li>Security Analyst</li>
+                                <li>White Hat Hacker</li>
+                                <li>Big Data Analyst</li>
+                         
+                        </div>
+
+                    </div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+     
+                                <a href="https://et.iupui.edu/departments/cigt/programs/cit/">
+                                    <button type="button" class="btn btn-warning goldbkg">
+                                        Learn more</button>
+                                </a>
+            
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- WEB DEVELOPMENT -->
+    <div class="modal" id="webdevelopment" tabindex=-1 aria-labelledby="webdevelopmentLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content iupui">
+                <div class="modal-header infoHeader">
+                    <h1 class="modal-title infoHeader" id="webdevelopmentLabel1">Web Development</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+<p class="question">
+                            What is the common name for the modern drop down menu on a web site? You know, the one with
+                            the horizontal lines?
+                            --- this big?
+                        </p>
+                        
+                            <p class="questionanswer">Give your answer to the person at the <em>Web Design</em> table.</p>
+                        </div>
+                    </div>
+                    <div class="infocontainer infocontainerdivider"></div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">Job Opportunities in this area
+                            </p>
+
+                        </div>
+                        <div class="infocontaineritem">
+                            
+                                <li>Front End App Developer</li>
+                                <li>User Experience Designer</li>
+                                <li>Web Designer</li>
+                        
+                        </div>
+
+                    </div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                  
+                                <a href="https://et.iupui.edu/departments/cigt/programs/cit/">
+                                    <button type="button" class="btn btn-warning goldbkg">
+                                        Learn more</button>
+                                </a>
+                          
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- NETWORKING -->
+    <div class="modal" id="networking" tabindex=-1 aria-labelledby="networkingLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content iupui">
+                <div class="modal-header infoHeader">
+                    <h5 class="modal-title infoHeader" id="networkingLabel1">Networks</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">
+                            What is the protocol that supports resending data packets if one gets lost?
+                        </p>
+                        
+                      
+                            <p class="questionanswer">Give your answer to the person at the <em>Networks</em> table.</p>
+                        </div>
+                    </div>
+                    <div class="infocontainer infocontainerdivider"></div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">Job opportunities in this area
+                            </p>
+</div>
+<div class="infocontaineritem">
+                            <p class="questionanswer">
+                                xxxxxxx<br>
+                                xxxxxxxxxxxx<br>
+                                xxxxxxx
+                            </p>
+                        </div>
+
+                    </div>
+                  
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                                <a href="https://et.iupui.edu/departments/cigt/programs/cit/">
+                                    <button type="button" class="btn btn-warning goldbkg roundyButton">
+                                        Learn more</button>
+                                </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- THEMED ENTERTAINMENT -->
+    <div class="modal" id="themedentertainment" tabindex=-1 aria-labelledby="themedentertainmentLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content iupui">
+                <div class="modal-header infoHeader">
+                    <h1 class="modal-title infoHeader" id="themedentertainmentLabel1">Themed Entertainment</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">
+                            Who is considered the father of themed entertainment?
+                        </p>
+                        <p class="questionanswer">Give your answer to the person at the <em>Themed Entertainment</em> table.</p>
+                        </div>
+                    </div>
+
+                    <div class="infocontainer infocontainerdivider"></div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">Job Opportunities in this area
+                            </p>
+                        </div>
+                        <div class="infocontaineritem">
+                                <ul>
+                                <li>Technical Director</li>
+                                <li>Show Writer</li>
+                                <li>Scenic Designer</li>
+                                <li>Creative Script Writer</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                                <a href="https://cgt.iupui.edu/Curriculum/Themed%20Entertainment%20Concentration.html">
+                                    <button type="button" class="btn btn-warning goldbkg roundyButton">
+                                        Learn more</button>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ANIMATION -->
+    <div class="modal" id="animation" tabindex=-1 aria-labelledby="animationLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content iupui">
+                <div class="modal-header infoHeader">
+                    <h1 class="modal-title infoHeader" id="animationLabel1">Animation</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class = "question"> XXX XXX XXXX XXX?</p>
+                 
+               
+                            <p class = "questionanswer">Give your answer to the person at the Animation table.</p>
+                        </div>
+                    </div>
+                    <div class="infocontainer infocontainerdivider"></div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">Job Opportunities in this area
+                            </p>
+
+                        </div>
+                        <div class="infocontaineritem">
+                        
+                               <li> 3D Modeler</li>
+                                <li>Animator</li>
+                                <li>Art Director</li>
+                                <li>Video Game Designer</li>
+                            
+                        </div>
+                    </div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                        
+                                <a href="https://cgt.iupui.edu/Curriculum/Plan%20of%20Study%20-%20Animation.html">
+                                    <button type="button" class="btn btn-warning goldbkg">
+                                        Learn more</button>
+                                </a>
+                      
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SOCIAL MEDIA -->
+    <div class="modal" id="socialmedia" tabindex=-1 aria-labelledby="socialmediaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content iupui">
+                <div class="modal-header infoHeader">
+                    <h1 class="modal-title infoHeader" id="socialmediaLabel1">Social Media</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">
+                            XXXX XX X XXXXX XXX XX XXXXXX XX XXXXXX XXX XXX XX?
+                        </p>
+                            <p class="questionanswer">Give your answer to the person at the <em>Social Media</em> table.</p>
+                        </div>
+                    </div>
+
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">Job Opportunities in this area
+                            </p>
+                        </div>
+                        <div class="infocontaineritem">
+                            <ul>
+                                <li>Graphic Designer</li>
+                                <li>Front End Designer</li>
+                                <li>User Interface Designer</li>
+                                <li>User Experience Designer</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                                <a
+                                    href="https://cgt.iupui.edu/Curriculum/Plan%20of%20Study%20-%20Interactive%20Multimedia.html">
+                                    <button type="button" class="btn btn-warning goldbkg">
+                                        Learn more</button>
+                                </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- PROFESSIONAL PHOTO -->
+    <div class="modal" id="professionalphoto" tabindex=-1 aria-labelledby="professionalphotoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content iupui">
+                <div class="modal-header infoHeader">
+                    <h1 class="modal-title infoHeader" id="professionalphotoLabel1">Professional Photo</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">
+                            Why do you need a professional photo?
+                            </p>
+                       
+                        <p class= "questionanswer">
+                            You can use it for your linkedin profile, professional affiliations and memberships.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CARICATURES -->
+    <div class="modal" id="caricature" tabindex=-1 aria-labelledby="caricatureLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content iupui">
+                <div class="modal-header infoHeader">
+                    <h1 class="modal-title" id="caricatureLabel1">Caricature</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">
+                            Why should you NOT ....?
+                            </p>
+                        
+                            <p class="questionanswer">Find your inner-self, with a professionally created caricature!</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- CERTIFICATIONS -->
+    <div class="modal" id="certifications" tabindex=-1 aria-labelledby="certificationsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content iupui">
+                <div class="modal-header infoHeader">
+                    <h1 class="modal-title infoHeader" id="certificationsLabel1">Certifications</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">
+                            XXXX XX X XXXXX XXX XX XXXXXX XX XXXXXX XXX XXX XX?
+                            </p>
+                  
+                            <p class="questionanswer">Look for faculty_person_name <img class="facultypic" src="./images/sheila.png">at
+                                this table. Ask about our programs and where they can lead you.</p>
+                        </div>
+                    </div>
+
+                    <div class="infocontainer">
+
+                        <div class="infocontaineritem">
+                            <p>
+                                <i class="material-icons custom">star</i>certification<br>
+                                <i class="material-icons custom">star</i>certification<br>
+                                <i class="material-icons custom">star</i>certification<br>
+                                <i class="material-icons custom">star</i>certification
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                                <a href="https://et.iupui.edu/departments/cigt/programs/cit/undergrad/certificates/">
+                                    <button type="button" class="btn btn-warning goldbkg">
+                                        Learn more</button>
+                                </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- BUILDING BLOCKS TEMPLATE TO COPY -->
+    <div class="modal" id="buildingblocks" tabindex=-1 aria-labelledby="buildingLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="buildingModalLabel1">Building Blocks</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="tablequestion question-table">
+                        <tbody>
+                            <td>
+                                <span class="quote">There are 10 types
+                                    of people in the world, those who know binary and those who don't!</span>
+                            </td>
+                            <td>
+                                <i class="material-icons custom">question_answer</i>
+
+                                <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td class="infocell" colspan="2">Binary, Hex, Octal</td>
+                            </tr>
+                            <td><br>
+                                <i class="material-icons custom">stars</i> What is binary?<br>
+                                <i class="material-icons custom">stars</i> Why is binary important on computers?<br>
+                                <i class="material-icons custom">stars</i> How can I convert a decimal number to
+                                binary?
+                                <br>
+                                <i class="material-icons custom">stars</i> What's hexadecimal?<br>
+                                <i class="material-icons custom">stars</i> Can hexadecimal be converted to decimal?
+                                binary?
+                                <br>
+                                <i class="material-icons custom">stars</i> Why use hexadeciaml or decimal?<br>
+                                <i class="material-icons custom">stars</i> How many bits does a number need?<br>
+                                <i class="material-icons custom">stars</i> What is overflow?<br>
+                            </td>
+                            <td>
+
+
+
+
+
+
+                            </td>
+                            </tr>
+                            <tr>
+                                <td class="infocell" colspan="2">Measuring Bits and bytes</td>
+                            </tr>
+                            <tr>
+                                <td> <i class="material-icons custom">stars</i> How do we measure bits and bytes?<br>
+                                </td>
+                                <td>
+
+
+
+
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CLUBS -->
+    <div class="modal" id="clubs" tabindex=-1 aria-labelledby="clubsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content iupui">
+                <div class="modal-header infoHeader">
+                    <h1 class="modal-title" id="clubsLabel1">Clubs</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                            <p class="question">
+                            Why are clubs important?
+                            </p>
+                        
+                            <p class="questionanswer">Check at the <em>Clubs</em> table!</p>
+                        </div>
+                    </div>
+                    <div class="infocontainer">
+                        <div class="infocontaineritem">
+                                <a href="https://cgt.iupui.edu/teedc/index.html">
+                                    <button type="button" class="btn btn-warning goldbkg">
+                                        Learn more</button>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!----------------------------------------------------------------------------->
+
+    <!----------------------------------------------------------------------------->
+
+
+
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
